@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        // Create a list of numbers
+        List<Integer> numbers = Arrays.asList(10, 15, 20, 25, 30, 35, 40, 45, 50, 55);
+
+        // Use streams to filter numbers greater than 5 and divisible by 10
+        List<Integer> filteredNumbers = numbers.stream()
+                                                .filter(num -> num > 5 && num % 10 == 0)
+                                                .toList();
+
+        // Print the filtered numbers
+        System.out.println("Numbers greater than 5 and divisible by 10:");
+        System.out.println(filteredNumbers);
+    }
+}
